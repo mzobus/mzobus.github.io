@@ -1,0 +1,238 @@
+:root {
+    --mainColor: #163967;
+    --secondaryColor: #7fd79a;
+    --transitionTime: 300ms;
+    --fontSizeLarge: 100px;
+    --fontSizeMedium: 60px;
+    --fontSizeSmall: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 100px;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.company {
+    background-color: #fff;
+    color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-name {
+    font-size: var(--fontSizeLarge);
+    font-family: montserrat, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.company-name {
+    font-size: var(--fontSizeMedium);
+    font-family: montserrat, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.contact {
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: var(--fontSizeSmall);
+    font-family: fira-sans, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+    height: 90px;
+    width: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./location.png");
+}
+
+.contact > .headline {
+    font-family: montserrat, sans-serif;
+    font-size: var(--fontSizeMedium);
+    font-weight: 900;
+    font-style: normal;
+    margin: 25px 0 10px 0;
+}
+
+.contact-info {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-data {
+    margin: -5px 0 0 10px;
+}
+
+.phone-icon {
+    background-image: url("./phone.png");
+    height: 30px;
+    width: 30px;
+}
+
+.mail-icon {
+    background-image: url("./mail.png");
+    height: 30px;
+    width: 30px;
+}
+
+.social {
+    background-color: var(--secondaryColor);
+    color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    border-radius: 50%;
+    margin: 10px 0;
+    transition: box-shadow linear var(--transitionTime);
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social-icon.linkedin-icon::before {
+    background-image: url("./linkedin_green.png");
+}
+
+.social-icon.xing-icon::before {
+    background-image: url("./xing_green.png");
+}
+
+.social-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    transition: transform linear var(--transitionTime);
+}
+
+.social-icon:hover::after {
+    transform: scale(0.9);
+    transition: transform linear var(--transitionTime);
+}
+
+.social-icon:hover {
+    box-shadow: 0 0 0 5px rgba(22, 57, 103, 1);
+    transition: box-shadow linear var(--transitionTime);
+}
+
+
+/*iphone X*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    :root {
+        --fontSizeLarge: 12vw;
+        --fontSizeMedium: 8vw;
+        --fontSizeSmall: 6vw;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr 5fr minmax(55px, 1fr);
+    }
+
+    .contact-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contact-info {
+        height: 30px;
+    }
+
+    .phone-icon,
+    .mail-icon {
+        height: 20px;
+        width: 20px;
+        background-size: contain;
+    }
+
+    .contact-data {
+        margin: -5px 0 0 5px;
+    }
+
+    .contact > .headline {
+        margin: 10px 0 5px 0;
+    }
+
+    .social {
+        flex-direction: row;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px ;
+    }
+
+    .social-icon::before {
+        margin-left: -10px;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-icon:hover {
+        box-shadow: 0 0 0 3px rgba(22, 57, 103, 1);
+    }
+
+}
+
+
