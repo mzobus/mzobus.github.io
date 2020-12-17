@@ -92,6 +92,17 @@ body {
     margin: -5px 0 0 10px;
 }
 
+.no-style-link {
+    color: white;
+    text-decoration: none;
+    transition: color linear var(--transitionTime);
+}
+
+.contact-data > .no-style-link:hover {
+    color: var(--secondaryColor);
+    transition: color linear var(--transitionTime);
+}
+
 .phone-icon {
     background-image: url("./phone.png");
     height: 30px;
@@ -142,6 +153,14 @@ body {
 
 .social-icon.xing-icon::before {
     background-image: url("./xing_green.png");
+}
+
+.social-icon.freelance-icon::before {
+    background-image: url("./freelance_green.png");
+}
+
+.social-icon.gulp-icon::before {
+    background-image: url("./gulp_green.png");
 }
 
 .social-icon::after {
