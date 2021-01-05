@@ -70,7 +70,15 @@ body {
     width: 90px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("./location.png");
+    background-image: url("images/location.png");
+}
+
+.myself {
+    margin-bottom: 30px;
+}
+
+.myself > img {
+
 }
 
 .contact > .headline {
@@ -104,13 +112,13 @@ body {
 }
 
 .phone-icon {
-    background-image: url("./phone.png");
+    background-image: url("images/phone.png");
     height: 30px;
     width: 30px;
 }
 
 .mail-icon {
-    background-image: url("./mail.png");
+    background-image: url("images/mail.png");
     height: 30px;
     width: 30px;
 }
@@ -148,19 +156,19 @@ body {
 }
 
 .social-icon.linkedin-icon::before {
-    background-image: url("./linkedin_green.png");
+    background-image: url("images/linkedin_green.png");
 }
 
 .social-icon.xing-icon::before {
-    background-image: url("./xing_green.png");
+    background-image: url("images/xing_green.png");
 }
 
 .social-icon.freelance-icon::before {
-    background-image: url("./freelance_green.png");
+    background-image: url("images/freelance_green.png");
 }
 
 .social-icon.gulp-icon::before {
-    background-image: url("./gulp_green.png");
+    background-image: url("images/gulp_green.png");
 }
 
 .social-icon::after {
@@ -216,7 +224,7 @@ and (orientation: portrait) {
 
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 6fr 5fr minmax(55px, 1fr);
+        grid-template-rows: 3fr 5fr minmax(55px, 1fr);
     }
 
     .social {
@@ -232,6 +240,16 @@ and (orientation: portrait) {
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 812px) {
+
+    .myself {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .myself > img {
+        height: 200px;
+        width: auto;
+    }
 
     .contact-icon {
         height: 40px;
